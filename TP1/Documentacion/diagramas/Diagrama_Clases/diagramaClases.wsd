@@ -1,0 +1,64 @@
+@startuml DiagramaClase
+    hide circle
+    skinparam classAttributeIconSize 0
+
+    class AlgoFix{
+        # {field} pintores
+
+        + {method} metodos()
+        + {method} metodo2()
+        + {method} metodo3()
+    }
+
+    class Pintor{
+        + {field} atributos
+
+        + {method} metos()
+    }
+
+    abstract class Herramienta{
+        # {field} consumoPorMetro
+        # {field} horasTrabajoM2
+        # {field} descuentoMas40M2
+
+        + {abstract}{method} numeroMano(numMetros) : int
+    }
+
+    class Pincel{
+        - {method} initialize
+        + {method} numeroMano(numMetros) : int
+    }
+
+    class Rodillo{
+        - {method} initialize
+        + {method} numeroMano(numMetros) : int
+    }
+
+    class Pintura{
+    - {field} nombre
+    + {field} precioLitro
+    + {field} numManosPincel
+    + {field} numManosRodillo
+
+    + {method} manosPincel(): int
+    + {method} manosRodillo(): int
+    }
+
+    class FaltaImplementar{
+
+    }
+
+    'Asociaciones
+
+    AlgoFix -> Pintor : AgregarPintor
+    AlgoFix --> Pintura : CrearPintura
+    
+    Pintor --* Herramienta
+
+    Herramienta <|-- Rodillo
+    Herramienta <|-- Pincel
+
+    Rodillo .. Pintura
+    Pincel .. Pintura
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml DiagramaSecuencial
+    hide circle
+    skinparam classAttributeIconSize 0
+
+    class clase1{
+        {field} atribute
+    
+        {method} name()
+    }
+
+
+    'Asociaciones
+
+@enduml

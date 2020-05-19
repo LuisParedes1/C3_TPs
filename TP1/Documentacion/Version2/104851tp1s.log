@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400) (preloaded format=pdflatex 2020.5.12)  12 MAY 2020 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400) (preloaded format=pdflatex 2020.5.12)  18 MAY 2020 17:56
 entering extended mode
 **/home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/104851tp1s.tex
 (/home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/104851tp1s.tex
@@ -203,22 +203,22 @@ LaTeX Info: Redefining \% on input line 25.
 )
 \openout1 = `104851tp1s.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 \AtBeginShipoutBox=\box48
  (/home/luisvit/.miktex/texmfs/install/tex/latex/graphics/color.sty
 Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
@@ -227,7 +227,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 21.
+Package hyperref Info: Link coloring ON on input line 23.
  (/home/luisvit/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/home/luisvit/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
@@ -237,11 +237,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count191
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
-LaTeX Info: Redefining \. on input line 21.
-LaTeX Info: Redefining \% on input line 21.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
  (/home/luisvit/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count192
@@ -259,22 +259,22 @@ LaTeX Info: Redefining \% on input line 21.
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-<logofiuba.jpg, id=3, 387.00584pt x 129.3633pt>
-File: logofiuba.jpg Graphic file (type jpg)
-<use logofiuba.jpg>
-Package pdftex.def Info: logofiuba.jpg  used on input line 23.
+<imagenes/logofiuba.jpg, id=3, 387.00584pt x 129.3633pt>
+File: imagenes/logofiuba.jpg Graphic file (type jpg)
+<use imagenes/logofiuba.jpg>
+Package pdftex.def Info: imagenes/logofiuba.jpg  used on input line 25.
 (pdftex.def)             Requested size: 170.71652pt x 57.0641pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 32.
+(Font)              <14.4> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
+(Font)              <7> on input line 34.
  [1
 
-{/home/luisvit/.miktex/texmfs/data/pdftex/config/pdftex.map} </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/logofiuba.jpg>] (/home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/104851tp1s.toc
+{/home/luisvit/.miktex/texmfs/data/pdftex/config/pdftex.map} </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/imagenes/logofiuba.jpg>] (/home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/104851tp1s.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 7.
+(Font)              <5> on input line 6.
 )
 \tf@toc=\write3
 \openout3 = `104851tp1s.toc'.
@@ -282,72 +282,82 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 \newpage
+l.45 \newpage
               [1]
-<diagrama_clase01.png, id=36, 454.69875pt x 279.29344pt>
-File: diagrama_clase01.png Graphic file (type png)
-<use diagrama_clase01.png>
-Package pdftex.def Info: diagrama_clase01.png  used on input line 70.
-(pdftex.def)             Requested size: 339.67029pt x 208.64279pt.
+<imagenes/test.png, id=34, 544.0325pt x 583.17876pt>
+File: imagenes/test.png Graphic file (type png)
+<use imagenes/test.png>
+Package pdftex.def Info: imagenes/test.png  used on input line 81.
+(pdftex.def)             Requested size: 339.67029pt x 364.12988pt.
  [2]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 80.
+<imagenes/diagrama_clase01.png, id=39, 454.69875pt x 279.29344pt>
+File: imagenes/diagrama_clase01.png Graphic file (type png)
+<use imagenes/diagrama_clase01.png>
+Package pdftex.def Info: imagenes/diagrama_clase01.png  used on input line 89.
+(pdftex.def)             Requested size: 339.67029pt x 208.64279pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.97 \subsection
+                {Subseccion 1}pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.97 \subsection
+                {Subseccion 1} </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/imagenes/test.png (PNG copy)> </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/imagenes/diagrama_clase01.png>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 100.
  (/home/luisvit/.miktex/texmfs/install/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Overfull \hbox (16.30609pt too wide) in paragraph at lines 86--86
+Overfull \hbox (16.30609pt too wide) in paragraph at lines 106--106
 []\T1/cmtt/m/n/10 rango copy do: [ :unNumero | unNumero isPrime ifFalse: [ rango remove: unNumero ] ].[] 
  []
 
-[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.97 \item[Excepcion]
-                      Integer porta efficitur felis. Etiam facilisis consect... </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/diagrama_clase01.png>]
-<diagrama_secuencia01.png, id=48, 645.91313pt x 324.46219pt>
-File: diagrama_secuencia01.png Graphic file (type png)
-<use diagrama_secuencia01.png>
-Package pdftex.def Info: diagrama_secuencia01.png  used on input line 109.
+<imagenes/diagrama_secuencia01.png, id=46, 645.91313pt x 324.46219pt>
+File: imagenes/diagrama_secuencia01.png Graphic file (type png)
+<use imagenes/diagrama_secuencia01.png>
+Package pdftex.def Info: imagenes/diagrama_secuencia01.png  used on input line 131.
 (pdftex.def)             Requested size: 339.67029pt x 170.6274pt.
-<diagrama_secuencia02.png, id=49, 551.81157pt x 362.85562pt>
-File: diagrama_secuencia02.png Graphic file (type png)
-<use diagrama_secuencia02.png>
-Package pdftex.def Info: diagrama_secuencia02.png  used on input line 121.
+<imagenes/diagrama_secuencia02.png, id=47, 551.81157pt x 362.85562pt>
+File: imagenes/diagrama_secuencia02.png Graphic file (type png)
+<use imagenes/diagrama_secuencia02.png>
+Package pdftex.def Info: imagenes/diagrama_secuencia02.png  used on input line 139.
 (pdftex.def)             Requested size: 424.58624pt x 279.2059pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.123 \end{figure}
-                   </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/diagrama_secuencia01.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+l.141 \end{figure}
+                   </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/imagenes/diagrama_secuencia01.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.131 \end{document}
-                     </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/diagrama_secuencia02.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
+l.145 \end{document}
+                     </home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/imagenes/diagrama_secuencia02.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
  (/home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/104851tp1s.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 131.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 145.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 145.
  ) 
 Here is how much of TeX's memory you used:
- 7038 strings out of 481006
- 107156 string characters out of 2906530
- 378575 words of memory out of 3000000
- 22695 multiletter control sequences out of 15000+200000
+ 7045 strings out of 481006
+ 107412 string characters out of 2906530
+ 377613 words of memory out of 3000000
+ 22700 multiletter control sequences out of 15000+200000
  539732 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,45p,835b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,11n,45p,280b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/luisvit/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk> </home/luisvit/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk> </home/luisvit/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk> </home/luisvit/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk> </home/luisvit/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1000.pk> </home/luisvit/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1440.pk> </home/luisvit/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx2488.pk>
-Output written on /home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/104851tp1s.pdf (6 pages, 380340 bytes).
+Output written on /home/luisvit/programacion/C3/TPs/TP1/Documentacion/Version2/104851tp1s.pdf (6 pages, 397426 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
+ 338 PDF objects out of 1000 (max. 8388607)
  19 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

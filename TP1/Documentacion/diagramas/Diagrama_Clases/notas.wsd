@@ -1,0 +1,22 @@
+'notas
+
+'asi heredo
+clase1 <|-- clase2 
+
+'borrar el circulo
+hide Circle
+
+
+
+/'
+
+Este es un cometario largo
+
+
+
+https://plantuml.com/class-diagram
+
+http://ogom.github.io/draw_uml/plantuml/
+
+
+'\
