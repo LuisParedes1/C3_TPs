@@ -13,14 +13,17 @@
     class Pintor{
         + {field} atributos
 
-        + {method} metos()
+        + {static}{method} registrarPintorDePincel(nombre:String, valorHora: int): void
+        + {static}{method} registrarPintorDeRodillo(nombre:String, ValorHora: int): void
+
     }
 
     abstract class Herramienta{
-        # {field} consumoPorMetro
-        # {field} horasTrabajoM2
-        # {field} descuentoMas40M2
+        + {field} consumoPorMetro
+        + {field} horasTrabajoM2
+        + {field} descuentoMas40M2
 
+        + {abstract}{method} initialize
         + {abstract}{method} numeroMano(numMetros) : int
     }
 
@@ -35,13 +38,15 @@
     }
 
     class Pintura{
-    - {field} nombre
     + {field} precioLitro
     + {field} numManosPincel
     + {field} numManosRodillo
 
     + {method} manosPincel(): int
     + {method} manosRodillo(): int
+    + {method} presupuestoLitros(numLitros:int):int
+
+    +{static}{method} crearPintura(unNombre:String, conPrecioPorLitro: int, manosPincel: int ,manosRodillo: int):Pintura
     }
 
     class FaltaImplementar{
@@ -58,7 +63,7 @@
     Herramienta <|-- Rodillo
     Herramienta <|-- Pincel
 
-    Rodillo .. Pintura
-    Pincel .. Pintura
+    Rodillo --> Pintura
+    Pincel --> Pintura
 
 @enduml
