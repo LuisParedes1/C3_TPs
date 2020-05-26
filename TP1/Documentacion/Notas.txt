@@ -4,7 +4,7 @@ Aclaracion
 
 Pincel y Rodillo heredan de Herramienta
 
-- Al momento de refactorizar note que su comportamiento era muy parecido excepto en el metodo numeroManos: 
+- Al momento de refactorizar se observo que el comportamiento del pincel y el rodillo era muy parecido excepto en el metodo numeroManos: 
 por tanto ese metodo se definio como abstracto en el la clase Herramienta para que el pincel y el rodillo definieran 
 su comportamiento particular. 
 

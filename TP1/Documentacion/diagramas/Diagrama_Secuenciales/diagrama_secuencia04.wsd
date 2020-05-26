@@ -1,0 +1,51 @@
+@startuml test04AplicarDescuentoMas40M2
+    hide footbox
+    skinparam classAttributeIconSize 0
+   
+    autonumber 1.0
+    actor Luis
+    activate Luis
+    Luis -> ":prueba" as prueba: test04AplicarDescuento
+    activate prueba
+
+    autonumber 2.0
+    prueba -> prueba: pintor = registrarPintorDePincel("Diego", 500)
+
+    create "pintor:Pintor" as pintor
+    prueba -> pintor: << create >>
+    activate pintor
+
+    create "pincel: Pincel" as pincel
+    pintor -> pincel: << create >>
+    activate pincel
+
+    autonumber 3.0
+    prueba -> prueba: alba = crearPintura(alba, 200, 1, 1)
+
+    create "alba:Pintura" as alba
+    prueba -> alba: << create >>
+    activate alba
+
+    autonumber 4.0
+    prueba -> pintor: calcularCostoM2ConPintura(41, alba)
+
+
+    pintor -> pintor: costoManoObra = costoManoObra(41)
+    pintor -> pintor: costoMateriales = costoMateriales(alba, 41)
+
+    pintor -> pincel: numManos = numeroManos(alba)
+    pincel -> alba: manosPincel()
+    alba --> pintor: manosPincel
+
+    alt numMetros < 40
+        pintor -> pintor: descuento = 0
+    end
+
+    pintor -> pintor: costoProyecto = (manoObra - descuento + costoMateriales) * numManos
+
+
+    autonumber 5.0
+    prueba -> pintor: presupuestoSinDescuento = valor()    
+    prueba --> Luis: presupuestoSinDescuento
+
+@enduml

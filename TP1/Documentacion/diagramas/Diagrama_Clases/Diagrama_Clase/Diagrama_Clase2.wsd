@@ -1,0 +1,55 @@
+@startuml DiagramaClase02
+    hide circle
+    skinparam classAttributeIconSize 0
+
+    class AlgoFix{
+    + {method} crearPintura(nombre:str, precioLitro: int, manosPincel: int ,manosRodillo: int): Pintura
+    }
+
+    class Pintor{
+        + {method} calcularCostoM2ConPintura(metros: int, pintura: Pintura): int
+    }
+
+    class Pincel{
+        + {method} numeroMano(pintura: Pintura) : int
+    }
+
+    class Rodillo{
+        + {method} numeroMano(pintura:Pintura) : int
+    }
+
+    class Pintura{
+    + {field} precioLitro: int
+    + {field} numManosPincel: int
+    + {field} numManosRodillo: int
+
+    + {method} manosPincel(): int
+    + {method} manosRodillo(): int
+    + {method} presupuestoLitros(numLitros:int):int
+
+    +{static}{method} crearPintura(nombre:str, precioLitro: int,
+    {static}manosPincel: int ,manosRodillo: int): Pintura
+    }
+
+    ' Version 1
+
+    AlgoFix "1 ".down.>"1..2 " Pintura
+
+    Pintor .up.> Pintura
+
+    Rodillo .right.> Pintura
+
+    Pincel .left.> Pintura
+
+
+/' Version 2
+    AlgoFix "1"..>"1..2   " Pintura
+
+    Pintor .up.> Pintura
+
+    Rodillo .up.> Pintura
+
+    Pincel ..> Pintura
+'/
+
+@enduml

@@ -1,0 +1,65 @@
+@startuml test01PresupuestoPintorUtilizaPincelConPinturaAlbaOfreceElMenorPresupuesto
+    hide footbox
+    skinparam classAttributeIconSize 0
+   
+    autonumber 1.0
+    actor Luis
+    activate Luis
+    Luis -> "algoFix:AlgoFix" as algoFix: test01obtenerPresupuestoPintor
+    activate algoFix
+    
+    autonumber 2.0
+    algoFix -> algoFix: registrarPintorDePincel("Diego", 500)
+
+    create "pintor:Pintor" as pintor
+    algoFix -> pintor: << create >>
+    activate pintor
+
+    create "pincel: Pincel" as pincel
+    pintor -> pincel: << create >>
+    activate pincel
+
+    autonumber 3.0
+    algoFix -> algoFix: alba = crearPintura(alba, 200, 1, 1)
+
+    create "alba:Pintura" as alba
+    algoFix -> alba: << create >>
+    activate alba
+
+    autonumber 4.0
+    algoFix -> algoFix: presupuesto = presupuesto...M2Pintura(5, alba)
+
+    loop pintores
+        algoFix -> pintor: calcularCostoM2ConPintura(5, alba)
+        algoFix -> pintor: valor = valor()
+        algoFix -> algoFix: detectMin(valor)
+    end 
+
+    algoFix --> Luis: presupuesto
+
+@enduml
+
+/'    activate Pintor
+    'Crea el objeto Herramienta
+    create Herramienta 
+    Pintor --> Herramienta : Crear_Herramienta
+    return
+
+    alt [1>2]
+        Pintor -> Pintor
+    end
+
+    AlgoFix -> Pintura : creo_pintura
+    return
+
+    objeto1 ->]
+    ' Mensaje perdido
+
+    [o-> objeto2
+    ' Mensaje encontrado
+
+
+ '   note right: First messege
+
+    objeto2 -> objeto2 : autogol
+'/

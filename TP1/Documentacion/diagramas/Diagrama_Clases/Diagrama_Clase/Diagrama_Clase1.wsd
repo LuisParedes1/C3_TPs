@@ -1,0 +1,68 @@
+@startuml DiagramaClase01
+    hide circle
+    skinparam classAttributeIconSize 0
+
+    class AlgoFix{
+
+    + {method} manoDeObraMasMateriales(manoObra: int, materiales: int): int
+    + {method} presupuestoMasBaratoParaPintarM2ConPintura(metros: int, pintura: Pintura): Pintor 
+    + {method} registrarPintorDePincel(nombre:String, valorHora: int): void
+    + {method} registrarPintorDeRodillo(nombre:String, ValorHora: int): void
+    + {method} crearPintura(nombre:Str, precioLitro: int, manosPincel: int ,manosRodillo: int): Pintura
+   
+
+    }
+
+    class Pintor{
+        + {field} nombre: str
+        + {field} valorHora: int
+        + {field} costoProyecto: int
+
+        + {method} calcularCostoM2ConPintura(metros: int, pintura: Pintura): void
+        + {method} responsable(): str
+        + {method} valor(): int
+
+        - {method} descuento(metros:int)
+        - {method} costoManoObra(numMetros)
+        - {method} costoMaterialesM2(pintura:Pintura, metros:int)
+
+        + {static}{method} registrarPintorDePincel(nombre:String, valorHora: int): Pintor
+        + {static}{method} registrarPintorDeRodillo(nombre:String, ValorHora: int): Pintor
+
+    }
+
+    abstract class Herramienta{
+        + {field} consumoPorM2: int
+        + {field} horasTrabajoM2: int
+        + {field} descuentoMas40M2: int
+
+        + {method} descuentoDeCosto(metros:int, costo:int): int
+        + {method} horasTrabajoM2(metros:int): int
+        + {method} litrosPinturaUsarM2(metros:int): int
+
+        + {abstract}{method} initialize
+        + {abstract}{method} numeroMano(pintura: Pintura) : int
+    }
+
+    class Pincel{
+        - {method} initialize
+        + {method} numeroMano(pintura: Pintura) : int
+    }
+
+    class Rodillo{
+        - {method} initialize
+        + {method} numeroMano(pintura:Pintura) : int
+    }
+
+
+    'Asociaciones
+
+    AlgoFix "1" o--> "1..*" Pintor
+    
+    Pintor *-- Herramienta
+    
+
+    Herramienta <|-- Rodillo
+    Herramienta <|-- Pincel
+
+@enduml

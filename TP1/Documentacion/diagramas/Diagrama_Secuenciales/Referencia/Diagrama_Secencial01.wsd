@@ -1,0 +1,39 @@
+@startuml DiagramaSecuencial01
+    hide footbox
+    skinparam classAttributeIconSize 0
+    autonumber
+
+
+    actor Luis
+    activate Luis
+    Luis -> AlgoFix: Has algo
+
+    activate AlgoFix
+    AlgoFix -> Pintor : enviar_mensaje
+
+    activate Pintor
+    'Crea el objeto Herramienta
+    create Herramienta 
+    Pintor --> Herramienta : Crear_Herramienta
+    return
+
+    alt [1>2]
+        Pintor -> Pintor
+    end
+
+    AlgoFix -> Pintura : creo_pintura
+    return
+
+    objeto1 ->]
+    ' Mensaje perdido
+
+    [o-> objeto2
+    ' Mensaje encontrado
+
+
+ '   note right: First messege
+
+    objeto2 -> objeto2 : autogol
+
+    
+@enduml

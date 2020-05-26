@@ -3,10 +3,13 @@
 \contentsline {section}{\numberline {2}Supuestos}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Pincel}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Rodillo}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Alba}{2}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Venier}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.3}Pintura}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Pintor}{2}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Diagramas de clase}{3}{section.3}%
 \contentsline {section}{\numberline {4}Detalles de implementación}{4}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Nota de los tests}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Nota de los tests}{5}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Excepciones}{5}{section.5}%
 \contentsline {section}{\numberline {6}Diagramas de secuencia}{5}{section.6}%
+\contentsline {subsection}{\numberline {6.1}test01ObtenerPresupuestoPintor}{5}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}test04ObtenerDescuentoMas40M2}{6}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Referencias}{8}{section.7}%

@@ -1,0 +1,30 @@
+@startuml calcularCostoM2ConPintura
+    hide footbox
+    skinparam classAttributeIconSize 0
+
+    activate "pintor:Pintor"
+    activate "pincel:Pincel"
+    activate "alba:Pintura"
+
+    -> "pintor:Pintor": calcularCostoM2ConPintura(5, alba)
+    
+    "pintor:Pintor" -> "pintor:Pintor": manoObra = costoManoObraM2(5)
+    "pintor:Pintor" -> "pincel:Pincel": horasTrabajoM2(5)
+    "pincel:Pincel" --> "pintor:Pintor": horasTrabajo
+
+    "pintor:Pintor" -> "pintor:Pintor": descuento = descuento(5)
+
+    "pintor:Pintor" -> "pintor:Pintor": costoMateriales = costoMaterialesM2(alba,metros)
+    "pintor:Pintor" -> "pincel:Pincel": litrosPinturaM2(metros)
+    "pincel:Pincel" --> "pintor:Pintor": litrosPinturaM2
+    "pintor:Pintor" -> "alba:Pintura": presupuestoLitros(litrosPinturaM2)
+    "alba:Pintura" --> "pintor:Pintor": costoMaterialesM2
+
+    "pintor:Pintor" -> "pincel:Pincel": numManos = numeroManos(alba)
+    "pincel:Pincel" -> "alba:Pintura": manosPincel()
+    "alba:Pintura" --> "pintor:Pintor": manosPincel
+
+    "pintor:Pintor" -> "pintor:Pintor"
+    note right: costoProyecto = (manoObra - descuento + costoMateriales) * numManos
+
+@enduml
