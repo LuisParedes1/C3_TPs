@@ -76,7 +76,6 @@ Los siguientes supuestos se tomaron como constantes que siempre se cumpliran en 
 
   \subsection{Pintura}
     \begin{itemize}
-      \item Si es negativo o cero: valor por $M^2$ o numero manos Pincel o numero manos Rodillo, entonces lanzara \textbf{ValorInvalido} al crear la pintura.
       \item Pintura Alba siempre requiere 1 mano con pincel o 1 mano con rodillo.
       \item Pintura Venier siempre requiere 2 manos con pincel o 1 mano con rodillo.
     \end{itemize}
@@ -84,7 +83,6 @@ Los siguientes supuestos se tomaron como constantes que siempre se cumpliran en 
   \subsection{Pintor}
     \begin{itemize}
       \item Se asume que siempre se cargaran pintores que no tengan nombres repetidos.
-      \item Si el pintor pinta un numero negativo de $M^2$ se lanzara excepcion \textbf{ValorInvalido}.
     \end{itemize}
   
 
@@ -104,15 +102,16 @@ Los siguientes supuestos se tomaron como constantes que siempre se cumpliran en 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{diagrama_clase01.png}
+  \includegraphics[width=0.98\textwidth]{diagrama_clase01.png}
   \caption{\label{fig:class01}Diagrama Asocioaciones entre Clases.}
   \end{figure}
 
   En el diagrama de la figura \ref{fig:class01} se observan las asociaciones entre las distintas clases. 
   Se observa que cada AlgoFix tendra por lo menos un pintor que siempre existirá junto con su herramienta, la cual puede ser Pincel o Rodillo. Esta tendrán el mismo
-  comportamiento pero con sus propias propiedades. En particular, la herramienta definirá las horas que tendra que trabajar, junto con los Litros de pintura a gastar y 
-  el descuento que hace (si es que hace) al pintar mas de 40 $M^2$ el Pintor. Cada pintor es responsable de conocer el precio que cobrará por el trabajo; por tanto, 
-  al buscar el menor presupuesto se busca el pintor que cobre menos preguntandole a cada uno. 
+  comportamiento pero con sus propias propiedades. 
+  
+  En particular, la herramienta definirá las horas que tendra que trabajar, los Litros de pintura a gastar y 
+  el descuento que hace (si es que hace) al pintar mas de 40 $M^2$ el Pintor. 
 
 \begin{figure}[H]
 \centering
@@ -125,19 +124,12 @@ En la figura \ref{fig:class02} se representan las dependencias debiles que tiene
 entonces se abstraen unicamente los metodos que hacen referencia al objeto Pintura.\newline
 
 Dado que distintas pinturas requieren distintos trabajos, del diagrama se observa que el Pincel y Rodillo le preguntan cuantas manos deben pasar y el Pintor le pregunta
-cuanto es el costo de la pintura segun los litros que se usó. Esto es debido a que la Pintura tiene comportamiento propio definido el cual solamente ésta conoce. 
-Por ultimo, como a AlgoFix se le pide que cree una pintura entonces le delega el comportamiento al constructor de Pinturas y éste devuelve una con los datos establecidos.
-
+cuanto es el costo de la pintura segun los litros que se usó. Esto es debido a que la Pintura tiene comportamiento propio definido el cual solamente ésta conoce.
 
 
 % Explicaciones sobre la implementación interna de algunas clases que consideren que puedan llegar a resultar interesantes.
 \section{Detalles de implementación}\label{sec:implementacion}
-\begin{itemize}
-  \item Por decisión de diseño las excepciones intentarán salir al no mas crear los objetos. Es decir, si en la creacion de un Pincel o Pintura se
-  le pasa algun valor invalido lanzará la excepcion \textbf{ValorInvalido} en el momento de su creación. Sin embargo, adicionalmente para darle mayor 
-  robustez al programa, en los casos bordes donde por alguna razon llega algun valor invalido a las operaciones esperadas, lanzara la 
-  excepcion \textbf{ValorInvalido} y asi evitar resultados absurdos.
-  
+\begin{itemize}  
   \item Se tomaran los supuestos hechos en la sección \ref{sec:supuestos} como invariantes en todo momento del programa,
   por tanto las propiedades propias de cada objeto se asignan en su inicializacion en el momento de su creacion y no cambiaran.
 
@@ -150,7 +142,7 @@ Por ultimo, como a AlgoFix se le pide que cree una pintura entonces le delega el
 \subsection{Nota de los tests}
 De las pruebas integradoras, se extrajeron cada una de las pruebas unitarias y se pusieron en AlgoFixTestUnitarios 
 de modo de simplificar el panorama y enfocar unicamente la atencion en resolver un problema a la vez. 
-De este modo su proposito es cumplir con las pruebas por separado para que luego pasen las pruebas integradoras. \newline
+De este modo, su proposito es cumplir con las pruebas por separado para que luego pasen las pruebas integradoras. \newline
 
 Adicionalmente se creo una clase de prueba por cada clase creada para resolver el trabajo practico
 en las cuales se pone a prueba el comportamiento esperado del objeto en tiempo de ejecucion. Por tanto
@@ -161,12 +153,11 @@ y es distinto de las otras pruebas.
 % Explicación de cada una de las excepciones creadas y con qué fin fueron creadas.
 \section{Excepciones}\label{sec:excepciones}
 \begin{description}
-\item[Exception \underline{ValorInvalido:}] Excepcion lanzada en caso de pasarle un parametro que no haga sentido para el comportamiento esperado del objeto
-y evitar absurdos.
-
-Se usa al pasarle un \textbf{numMetros} invalido al Pintor o a la Herramienta, y tambien cuando se pasa un \textbf{numLitros} invalido a la Pintura.
+\item[Exception \underline{NumeroMetrosInvalido:}] Se usa al pasarle un \textbf{numeroMetros} invalido al Pintor al calcular el presupuesto.
+\item[Exception \underline{PrecioPorLitroInvalido:}] Se lanza la excepcion al crear una Pintura nueva y pasarle un \textbf{precioPorLitro} invalido.
+ Al crear la pintura se asume que se cumplen los supuestos \ref{sec:supuestos} y se respeta el numero de manos correspondiente para cada herramienta.
+\item[Exception \underline{ValorPorHoraInvalido:}] Se lanza la excepcion al crear un Pintor nuevo y asignarle un \textbf{valorPorHora} de trabajo invalido.
 \end{description}
-
 
 % Mostrar las secuencias interesantes que hayan implementado. Pueden agregar texto para explicar si algo no queda claro.
 \section{Diagramas de secuencia}\label{sec:diagramasdesecuencia}
@@ -178,15 +169,14 @@ trata de modelar un caso real donde el interés es calcular el pintor de menor p
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.98\textwidth]{diagrama_secuencia01.png} 
+\includegraphics[width= 1.1\textwidth]{diagrama_secuencia01.png} 
 \caption{\label{fig:seq01}Comportamiento esperado para obtener pintor de menor presupuesto.}
 \end{figure}
 
-\newpage
 \underline{Observaciones}
 \begin{itemize}
-  \item Se recortó el nombre del metodo \textbf{presupuestoMasBaratoParaPintarM2ConPintura}  a  \textbf{presupuesto...M2Pintura} para darle mayor claridad al diagrama.
-  \item Cada pintor calcula el costo que tiene para hacer el trabajo. Se le pregunta cual es su valor y se va guardando el pintor de menor presupuesto para devolverlo.
+  \item Se recortó el nombre del metodo \textbf{presupuestoMasBaratoParaPintarM2ConPintura}  a  \textbf{presp...M2Pintura} para darle mayor claridad al diagrama.
+  \item Cada pintor es responsable de conocer el precio que cobrará por el trabajo; por tanto, al buscar el menor presupuesto se busca el pintor que cobre menos preguntandole a cada uno.
   \item Los pasos que hace el pintor para calcular su presupuesto se abstrayeron en la figura \ref{fig:seq02} para darle claridad al diagrama.
 \end{itemize}
 
@@ -198,31 +188,37 @@ trata de modelar un caso real donde el interés es calcular el pintor de menor p
 
 \subsection{test04ObtenerDescuentoMas40M2}
 
-Los siguientes diagramas modelan el test04 de las pruebas unitarias del pintor donde al pintar mas de
-40 $M^2$ usando el Pincel y la pintura Alba entonces aplica un descuento del 50\%. En el diagrama \ref{fig:seq03} se 
-grafica el caso feliz donde se cumplen las condiciones necesarias para aplicar el descuento y en el diagrama \ref{fig:seq04} 
-se muestra que sucede en caso no cumplir las condiciones.
-
+El siguientes diagramas modela el test04 de las pruebas unitarias del Pintor. Al pintar mas de
+40 $M^2$ usando el Pincel y la pintura Alba entonces aplica un descuento del 50\%. Al igual que la figura \ref{fig:seq01} se 
+va a partir en 2 partes la interacción para destacar los aspectos más importantes.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{diagrama_secuencia03.png}
-  \caption{\label{fig:seq03}Diagrama de Secuencia del descuento. Caso Feliz.}
+  \includegraphics[width=1.0\textwidth]{diagrama_secuencia03.png}
+  \caption{\label{fig:seq03}Diagrama de Secuencia del test04.}
   \end{figure}
-
-  De la figura \ref{fig:seq03} se destaca como principal característica que el pintor es quien decide si aplicar el descuento cuando se cumpla la condición necesaria. 
-  En este caso se cumple y por tanto aplica el descuento; sin embargo, distintas herramientas aplicarán distintos 
-  descuentos, entonces el pintor le pregunta a su herramienta (en este caso el Pincel) cuánto es el descuento que debe aplicar al monto original.
-
-  Se omitieron las interacciones para los metodos costoManoObra(metros), costoMateriales(pintura,metros) ya que están 
-  expresadas en la figura \ref{fig:seq02}
 
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{diagrama_secuencia04.png}
-    \caption{\label{fig:seq04}Diagrama de Secuencia donde no se aplica el descuento.}
+    \includegraphics[width=1.0\textwidth]{diagrama_secuencia04.png}
+    \caption{\label{fig:seq04}Diagrama de Secuencia aplicando descuento.}
     \end{figure}
 
-    En la figura \ref{fig:seq04} el pintor no pinta mas de 40 $M^2$ entonces no aplica descuento.
+  Se puede observar que el comportamiento es idéntico al de la figura \ref{fig:seq02} 
+  con la excepción que ahora aplica el descuento. El objeto descuento conoce cuánto descuento debe de aplicar según la herramienta 
+  y decide si se puede aplicar o no.
+
+
+  \section{Conclusión}
+  
+  En el presente trabajo practico se modeló un sistema que permite encontrar el pintor de menor presupuesto utilizando el paradigma de la programacion orientada a objetos. 
+  Se observó que cada objeto creado tiene un proposito y es encargado de responder a su comportamiento esperado. Es importante destacar la 
+  importancia del cumplimiento del contrato por parte del objeto cliente ya que en caso de no cumplirse se lanzara alguna excepción 
+  debido a que el objeto receptor no sabra cómo responder al mensaje. Los diagramas en la figura \ref{fig:class01} y \ref{fig:class02} modelan las dependencias 
+  debiles y fuertes entre objetos. \newline
+
+  La resolución del trabajo practico usando este paradigma deja las puertas abiertas para una posible reimplementación de los métodos sin 
+  necesidad de volver a diseñarlo de nuevo. Junto con la ayuda de las distintas pruebas hechas, permite comprobar que se mantenga el mismo 
+  comportamiento implementado en este trabajo practico.
 
 \newpage
 \section{Referencias}

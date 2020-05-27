@@ -7,17 +7,18 @@
     activate "descuento:Descuento"
     activate "alba:Pintura"
 
-    -> "pintor:Pintor": calcularCostoM2ConPintura(5, alba)
+    -> "pintor:Pintor": calcularCostoM2ConPintura(41, alba)
     
-    "pintor:Pintor" -> "pintor:Pintor": manoObra = costoManoObraM2(5)
-    "pintor:Pintor" -> "pincel:Pincel": horasTrabajoM2(5)
+    "pintor:Pintor" -> "pintor:Pintor": manoObra = costoManoObraM2(41)
+    "pintor:Pintor" -> "pincel:Pincel": horasTrabajoM2(41)
     "pincel:Pincel" --> "pintor:Pintor": horasTrabajo
 
-    "pintor:Pintor" -> "pintor:Pintor": descuento = manoObra* descuento(5)
-    "pintor:Pintor" -> "pincel:Pincel": descuento(5)
-    "pincel:Pincel" -> "descuento:Descuento": puedoAplicar(5)
-    "descuento:Descuento" --> "pincel:Pincel": false 
-    "pincel:Pincel" -> "pincel:Pincel" : descuento = 0
+    "pintor:Pintor" -> "pintor:Pintor": descuento = manoObra* descuento(41)
+    "pintor:Pintor" -> "pincel:Pincel": descuento(41)
+    "pincel:Pincel" -> "descuento:Descuento": puedoAplicar(41)
+    "descuento:Descuento" --> "pincel:Pincel": true 
+    "pincel:Pincel" -> "descuento:Descuento": valor()
+     "descuento:Descuento" --> "pincel:Pincel": valor
     "pincel:Pincel" --> "pintor:Pintor": descuento
 
     "pintor:Pintor" -> "pintor:Pintor": costoMateriales = costoMaterialesM2(alba,metros)

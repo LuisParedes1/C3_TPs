@@ -22,9 +22,9 @@
         + {method} responsable(): str
         + {method} valor(): int
 
-        - {method} descuento(metros:int)
-        - {method} costoManoObra(numMetros)
-        - {method} costoMaterialesM2(pintura:Pintura, metros:int)
+        - {method} descuento(metros:int): int
+        - {method} costoManoObra(numMetros): int
+        - {method} costoMaterialesM2(pintura:Pintura, metros:int): int
 
         + {static}{method} registrarPintorDePincel(nombre:String, valorHora: int): Pintor
         + {static}{method} registrarPintorDeRodillo(nombre:String, ValorHora: int): Pintor
@@ -34,23 +34,31 @@
     abstract class Herramienta{
         + {field} consumoPorM2: int
         + {field} horasTrabajoM2: int
-        + {field} descuentoMas40M2: int
-
-        + {method} descuentoDeCosto(metros:int, costo:int): int
+    
+        + {method} descuento(metros:int): int
         + {method} horasTrabajoM2(metros:int): int
         + {method} litrosPinturaUsarM2(metros:int): int
 
-        + {abstract}{method} initialize
+        + {abstract}{method} initialize(): void
         + {abstract}{method} numeroMano(pintura: Pintura) : int
     }
 
+    class Descuento{
+        + {field} porcentaje: int
+
+        + {method} puedoAplicar(numeroMetros:int): bool
+        + {method} valor(): int
+
+        + {static}{method} crearConPorcentaje(porcentaje:int): Descuento 
+    }
+
     class Pincel{
-        - {method} initialize
+        - {method} initialize(): void
         + {method} numeroMano(pintura: Pintura) : int
     }
 
     class Rodillo{
-        - {method} initialize
+        - {method} initialize(): void
         + {method} numeroMano(pintura:Pintura) : int
     }
 
@@ -61,7 +69,7 @@
     
     Pintor *-- Herramienta
     
-
+    Herramienta *- Descuento
     Herramienta <|-- Rodillo
     Herramienta <|-- Pincel
 
