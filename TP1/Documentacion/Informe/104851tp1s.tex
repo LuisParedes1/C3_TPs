@@ -50,7 +50,7 @@
   Algoritmos y Programación III que consiste en desarrollar un sistema que permita encontrar el mejor 
   presupuesto de un pintor de acuerdo a las necesidades de los clientes. \newline
 
-  Este trabajo es desarrollado usando los conceptos del paradigma de la orientación a objetos
+  Este trabajo es desarrollado usando los conceptos del paradigma de la programación orientación a objetos
   utilizando el sistema Smalltalk.
 
 
@@ -58,20 +58,20 @@
 % situaciones que no estén contempladas en la especificación.
 \section{Supuestos}\label{sec:supuestos}
 
-Los siguientes supuestos se tomaron como constantes que siempre se cumpliran en el trabajo practico.
+Los siguientes supuestos se tomarán como constantes que siempre se cumpliran en el trabajo practico.
 
   \subsection{Pincel}
     \begin{itemize}
       \item El pintor que utiliza Pincel siempre tarda 2 horas en pintar un $M^2$.
       \item El pintor que utiliza Pincel siempre gastara 4 litros por $M^2$.
-      \item El pintor que utiliza Pincel dara un descuento del 50\% para proyectos mayores a 40 $M^2$.
+      \item El pintor que utiliza Pincel aplica un descuento del 50\% en la mano de obra para proyectos mayores a 40 $M^2$.
     \end{itemize}
 
   \subsection{Rodillo}
     \begin{itemize}
-      \item El pintor que utiliza Rodillo siempre tarda 1 horas en pintar un $M^2$.
+      \item El pintor que utiliza Rodillo siempre tarda 1 hora en pintar un $M^2$.
       \item El pintor que utiliza Rodillo siempre gastara 5 litros por $M^2$.
-      \item El pintor que utiliza Rodillo no aplica descuento para proyectos mayores a 40 $M^2$.
+      \item El pintor que utiliza Rodillo no aplica descuento.
     \end{itemize}
 
   \subsection{Pintura}
@@ -106,9 +106,9 @@ Los siguientes supuestos se tomaron como constantes que siempre se cumpliran en 
   \caption{\label{fig:class01}Diagrama Asocioaciones entre Clases.}
   \end{figure}
 
-  En el diagrama de la figura \ref{fig:class01} se observan las asociaciones entre las distintas clases. 
-  Se observa que cada AlgoFix tendra por lo menos un pintor que siempre existirá junto con su herramienta, la cual puede ser Pincel o Rodillo. Esta tendrán el mismo
-  comportamiento pero con sus propias propiedades. 
+  En el diagrama de la figura \ref{fig:class01} se observa que cada AlgoFix tendra por lo menos un pintor que siempre existirá 
+  junto con su herramienta, la cual puede ser Pincel o Rodillo. 
+  Esta tendrán el mismo comportamiento pero con sus propias propiedades. 
   
   En particular, la herramienta definirá las horas que tendra que trabajar, los Litros de pintura a gastar y 
   el descuento que hace (si es que hace) al pintar mas de 40 $M^2$ el Pintor. 
@@ -131,10 +131,10 @@ cuanto es el costo de la pintura segun los litros que se usó. Esto es debido a 
 \section{Detalles de implementación}\label{sec:implementacion}
 \begin{itemize}  
   \item Se tomaran los supuestos hechos en la sección \ref{sec:supuestos} como invariantes en todo momento del programa,
-  por tanto las propiedades propias de cada objeto se asignan en su inicializacion en el momento de su creacion y no cambiaran.
+  por tanto las propiedades propias de cada objeto se asignan en su inicializacion en el momento de su creacion y no cambiarán.
 
-  \item Al momento de refactorizar el codigo se observó que el comportamiento de \textbf{Pincel} y \textbf{Rodillo} es idéntico en todo excepto en el numeroManos. 
-  Por tanto se tomo la decisión de crear una clase abstracta \textbf{Herramienta} que contenga el comportamiento en común y cada objeto define el numeroManos 
+  \item Al refactorizar el codigo se observó que el comportamiento de \textbf{Pincel} y \textbf{Rodillo} era idéntico en todo excepto en el numeroManos. 
+  Por tanto se tomó la decisión de crear una clase abstracta \textbf{Herramienta} que contenga el comportamiento en común y luego cada uno define el numeroManos 
   necesario para pintar, según la pintura con la cual se trabaje.
 \end{itemize}
 
@@ -153,10 +153,10 @@ y es distinto de las otras pruebas.
 % Explicación de cada una de las excepciones creadas y con qué fin fueron creadas.
 \section{Excepciones}\label{sec:excepciones}
 \begin{description}
-\item[Exception \underline{NumeroMetrosInvalido:}] Se usa al pasarle un \textbf{numeroMetros} invalido al Pintor al calcular el presupuesto.
-\item[Exception \underline{PrecioPorLitroInvalido:}] Se lanza la excepcion al crear una Pintura nueva y pasarle un \textbf{precioPorLitro} invalido.
+\item[Exception \underline{NumeroMetrosInvalido:}] Se lanza la excepción al pasarle un \textbf{numeroMetros} invalido al Pintor al calcular el presupuesto.
+\item[Exception \underline{PrecioPorLitroInvalido:}] Se lanza la excepción al crear una Pintura nueva y pasarle un \textbf{precioPorLitro} invalido.
  Al crear la pintura se asume que se cumplen los supuestos \ref{sec:supuestos} y se respeta el numero de manos correspondiente para cada herramienta.
-\item[Exception \underline{ValorPorHoraInvalido:}] Se lanza la excepcion al crear un Pintor nuevo y asignarle un \textbf{valorPorHora} de trabajo invalido.
+\item[Exception \underline{ValorPorHoraInvalido:}] Se lanza la excepción al crear un Pintor nuevo y asignarle un \textbf{valorPorHora} de trabajo invalido.
 \end{description}
 
 % Mostrar las secuencias interesantes que hayan implementado. Pueden agregar texto para explicar si algo no queda claro.
@@ -205,7 +205,7 @@ va a partir en 2 partes la interacción para destacar los aspectos más importan
 
   Se puede observar que el comportamiento es idéntico al de la figura \ref{fig:seq02} 
   con la excepción que ahora aplica el descuento. El objeto descuento conoce cuánto descuento debe de aplicar según la herramienta 
-  y decide si se puede aplicar o no.
+  tambien decide si se puede aplicar o no.
 
 
   \section{Conclusión}
@@ -214,9 +214,9 @@ va a partir en 2 partes la interacción para destacar los aspectos más importan
   Se observó que cada objeto creado tiene un proposito y es encargado de responder a su comportamiento esperado. Es importante destacar la 
   importancia del cumplimiento del contrato por parte del objeto cliente ya que en caso de no cumplirse se lanzara alguna excepción 
   debido a que el objeto receptor no sabra cómo responder al mensaje. Los diagramas en la figura \ref{fig:class01} y \ref{fig:class02} modelan las dependencias 
-  debiles y fuertes entre objetos. \newline
+  fuertes y debiles entre objetos. \newline
 
-  La resolución del trabajo practico usando este paradigma deja las puertas abiertas para una posible reimplementación de los métodos sin 
+  La resolución del trabajo practico usando este paradigma deja las puertas abiertas para una posible reimplementación o mejora de los métodos sin 
   necesidad de volver a diseñarlo de nuevo. Junto con la ayuda de las distintas pruebas hechas, permite comprobar que se mantenga el mismo 
   comportamiento implementado en este trabajo practico.
 
