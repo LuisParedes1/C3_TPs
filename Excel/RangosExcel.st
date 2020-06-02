@@ -1,1 +1,0 @@
-Object subclass: #Dummy	instanceVariableNames: ''	classVariableNames: ''	package: 'RangosExcel'!
